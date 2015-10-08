@@ -13,6 +13,36 @@
     },
     "eventemitter3/eventemitter3.d.ts": {
       "commit": "52b0ea5c9719831eecf6ba7436660e30061a4b3c"
+    },
+    "mixto/mixto.d.ts": {
+      "commit": "66f88ec51858bb21bc375fa91a963c04bc09401e"
+    },
+    "emissary/emissary.d.ts": {
+      "commit": "66f88ec51858bb21bc375fa91a963c04bc09401e"
+    },
+    "text-buffer/text-buffer.d.ts": {
+      "commit": "66f88ec51858bb21bc375fa91a963c04bc09401e"
+    },
+    "pathwatcher/pathwatcher.d.ts": {
+      "commit": "66f88ec51858bb21bc375fa91a963c04bc09401e"
+    },
+    "space-pen/space-pen.d.ts": {
+      "commit": "66f88ec51858bb21bc375fa91a963c04bc09401e"
+    },
+    "q/Q.d.ts": {
+      "commit": "66f88ec51858bb21bc375fa91a963c04bc09401e"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "66f88ec51858bb21bc375fa91a963c04bc09401e"
+    },
+    "node/node.d.ts": {
+      "commit": "66f88ec51858bb21bc375fa91a963c04bc09401e"
+    },
+    "status-bar/status-bar.d.ts": {
+      "commit": "66f88ec51858bb21bc375fa91a963c04bc09401e"
+    },
+    "atom/atom.d.ts": {
+      "commit": "66f88ec51858bb21bc375fa91a963c04bc09401e"
     }
   }
 }

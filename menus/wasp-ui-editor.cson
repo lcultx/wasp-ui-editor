@@ -6,6 +6,12 @@
       'command': 'wasp-ui-editor:toggle'
     }
   ]
+  '.tree-view .file .name[data-name$=\\.cson]':[
+    {
+      'label': 'Open With WaspUIEditor'
+      'command':  'wasp-ui-editor:openfile'
+    }
+  ]
 'menu': [
   {
     'label': 'Packages'

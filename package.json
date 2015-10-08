@@ -1,18 +1,15 @@
 {
   "name": "wasp-ui-editor",
-  "main": "./lib/wasp-ui-editor",
+  "main": "./build/src/waspUIEditor",
   "version": "0.0.0",
   "description": "A short description of your package",
-  "keywords": [
-  ],
-  "activationCommands": {
-    "atom-workspace": "wasp-ui-editor:toggle"
-  },
+  "keywords": [],
   "repository": "https://github.com/atom/wasp-ui-editor",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
+    "atom-space-pen-views": "^2.1.0"
   }
 }
