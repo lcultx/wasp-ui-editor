@@ -1,5 +1,8 @@
+var prefix = '../../';
+require(prefix + '/fix_module_load');
 var angular2_1 = require('angular2/angular2');
 var router = require('angular2/router');
+console.log('load angular success!');
 var Application = require('./components/application/Application');
 var DBService_1 = require('./components/db/DBService');
 var service_1 = require('./components/explorer/service');
@@ -13,6 +16,7 @@ function main() {
         service_1.ExplorerService,
         service_3.EventService
     ]);
+    console.log('exec main function');
 }
 exports.main = main;
 main();

@@ -4,7 +4,7 @@
  *  MIT License (http://www.opensource.org/licenses/mit-license.html)
  *  Copyright (c) 2014 Vadim Namniak
  */
-
+console.log('--------------');
 (function() {
     'use strict';
 
