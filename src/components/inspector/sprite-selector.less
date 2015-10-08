@@ -1,0 +1,56 @@
+@import (reference) "../basic";
+
+sprite-selector {
+
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 1000;
+  width: 800px;
+  height: 90%;
+  display: none;
+  clear: both;
+
+  ide-dialog {
+    width: 800px;
+    height: 100%;
+  }
+
+  .toolbar {
+    min-height: 25px;
+    background-image: -webkit-linear-gradient(top, #1F252B, #21252B);
+    padding: 5px 20px;
+    border-bottom: 1px solid @input-border-color;
+    > select {
+      color: #99a5b4;
+      border-color: #17191f;
+      background-color: #1a1d23;
+      margin-right: 20px;
+      padding: 3px 7px
+    }
+    > span {
+      border: 1px solid #52595E;
+      border-radius: 5px;
+      padding: 2px 5px;
+      background-color: #161A1D;
+      color: #BFC2C5;
+      font-size: 14px;
+      font-family: monospace;
+    }
+  }
+
+  .img-wrap {
+    flex: 1;
+    position: relative;
+    overflow: auto;
+    background-color: #FFFFFF;
+
+    img {
+      background-color: #FFFFFF;
+    }
+  }
+  .frame-light {
+    position: absolute;
+    box-shadow: 0 0 15px 3px #000;
+  }
+}

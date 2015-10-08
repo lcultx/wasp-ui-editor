@@ -1,0 +1,30 @@
+<div id="app" class="app unselectable" >
+  <div class="panel-top">
+    <button (click)="onOpenProjectClick()">Open Project</button>
+    <button (click)="onOpenFileClick()">Open File</button>
+    <button (click)="onNewSceneFileClick()">New Scene File</button>
+    <button (click)="onNewUIFileClick()">New UI File</button>
+    <button (click)="onReloadCustomCompoents()">Reload Components</button>
+    <span class="prj-title">{{getCurrentProjectPath()}}</span>
+  </div>
+  <div class="panel-center">
+    <div class="panel panel-project">
+        <explorer></explorer>
+    </div>
+    <div class="splitter splitter0"></div>
+    <div class="panel panel-hierarchy">
+      <hierarchy></hierarchy>
+    </div>
+    <div class="splitter splitter1"></div>
+    <div class="panel panel-component">
+      <inspector></inspector>
+    </div>
+    <div class="splitter splitter2"></div>
+    <div class="panel panel-visual-editor">
+      <visual  ></visual>
+    </div>
+  </div>
+  <div class="dialog-container">
+    <component-selector></component-selector>
+  </div>
+</div>

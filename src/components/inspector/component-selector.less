@@ -1,0 +1,26 @@
+@import (reference) "../basic";
+
+.component-list {
+  width: 100%;
+  overflow: auto;
+
+  .item {
+    padding: 5px 5px 5px 5px;
+    padding-left: 20px;
+    color: @text-color;
+    font-size: 14px;
+    font-family: @text-font;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .item:hover {
+    background-color: lighten(@app-bg-color, 10%);
+    color: @text-color-selected;
+  }
+
+  .item.selected {
+    color: @text-color-selected;
+    background-color: @btn-bg-color-selected;
+  }
+}

@@ -1,0 +1,37 @@
+<div class="visual">
+  <div class="toolbar">
+    <!--
+    <div class="mode">
+      <button class="selected">Position</button>
+      <button>Collider</button>
+    </div>
+    <div class='splitter'></div>
+    -->
+    <div class='spacer'></div>
+    <div class='mousePos'>
+      <span>({{mousePos}})</span>
+    </div>
+    <button (click)="onReloadClick()">↻</button>
+    <div class='splitter'></div>
+    <div class='scale'>
+      <input [(ng-model)]="scale" (input)="updateScale()" class='scale-range' type='range' min='50' max='150' step='5'>
+      <span class='scale-value icon icon-settings'>{{scale}}%</span>
+    </div>
+    <div class='splitter'></div>
+    <div class='screen-size'>
+      <select [(ng-model)]="screenSize" (change)="updateCanvasSize()">
+        <option value='960x640'>960x640</option>
+        <option value='640x960'>640x960</option>
+        <option value='1136x640'>1136x640</option>
+        <option value='640x1136'>640x1136</option>
+      </select>
+    </div>
+  </div>
+  <div class="canvas-wrapper">
+    <canvas id="visual-canvas"></canvas>
+    <div id="edit-tools" class="edit-tools">
+      <div id="edit-tools-col" class="collider"></div>
+      <div id="edit-tools-pos" class="position"></div>
+    </div>
+  </div>
+</div>

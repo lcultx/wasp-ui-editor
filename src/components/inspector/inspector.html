@@ -1,0 +1,13 @@
+<div class="inspector">
+  <div *ng-if="objData" class="panel-container">
+    <basic-panel [objdata]="objData"></basic-panel>
+    <transform-panel [objdata]="objData"></transform-panel>
+    <div *ng-for="#compData of objData.components; #i = index">
+      <component-panel [objdata]="objData" [compdata]="compData">
+      </component-panel>
+    </div>
+    <div class="buttons add-comp-btns">
+      <button class="in-panel" (click)="onAddCompBtnClick()">Add Component</button>
+    </div>
+  </div>
+</div>

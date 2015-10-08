@@ -1,0 +1,50 @@
+<panel title="{{compdata.name}}" closable="true" (^click)="onClick($event)">
+  <div class="component">
+      <div *ng-for="#propAnno of getPropertyAnnos(); #i = index" class="row">
+        <div class="label">{{propAnno.propertyName}}</div>
+        <div class="fields" *ng-if="!propAnno.editor" [ng-switch]="propAnno.propertyType">
+          <template [ng-switch-when]="ptype.Image">
+            <prj-file-field class="custom"
+              [compdata]="compdata"
+              property="{{propAnno.propertyName}}"
+              [value]="getValueFromComponentData(compdata,propAnno.propertyName)">
+            </prj-file-field>
+          </template>
+          <template [ng-switch-when]="ptype.SpriteAtlas">
+            <prj-file-field class="custom"
+              [compdata]="compdata"
+              property="{{propAnno.propertyName}}"
+              [value]="getValueFromComponentData(compdata,propAnno.propertyName)">
+            </prj-file-field>
+          </template>
+          <template [ng-switch-when]="ptype.SpriteFrame">
+            <input [(ng-model)]="compdata.properties[propAnno.propertyName]">
+            <sprite-selector
+              property="{{propAnno.propertyName}}",
+              [compdata]="compdata"
+              show-action="before:click"
+              ></sprite-selector>
+          </template>
+          <template [ng-switch-when]="ptype.Json">
+            <json-field
+              [compdata]="compdata"
+              property="{{propAnno.propertyName}}"
+              [value]="getValueFromComponentData(compdata,propAnno.propertyName)">
+            </json-field>
+          </template>
+          <template [ng-switch-when]="ptype.Boolean">
+            <input type="checkbox" [(ng-model)]="compdata.properties[propAnno.propertyName]">
+          </template>
+          <template [ng-switch-when]="ptype.Int">
+            <input type="number" [(ng-model)]="compdata.properties[propAnno.propertyName]">
+          </template>
+          <template [ng-switch-when]="ptype.Number">
+            <input type="number" [(ng-model)]="compdata.properties[propAnno.propertyName]">
+          </template>
+          <template ng-switch-default>
+            <input [(ng-model)]="compdata.properties[propAnno.propertyName]">
+          </template>
+        </div>
+      </div>
+  </div>
+</panel>

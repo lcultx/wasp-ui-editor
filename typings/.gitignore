@@ -1,0 +1,16 @@
+build
+.idea
+.DS_Store
+node_modules
+bin
+bower_components
+.settings
+npm-debug.log
+game.js
+game_all.js
+release
+dist
+build
+tsconfig.json
+Electron.app
+src/**/*.css

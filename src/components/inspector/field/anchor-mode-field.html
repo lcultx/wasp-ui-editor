@@ -1,0 +1,89 @@
+<input class="anchor-mode-input" readonly="true" [(ng-model)]="objdata.transform.anchorMode" (click)="onClick()">
+<div class="anchor-mode-selector" (^click)="onSelectorClick($event)">
+  <div class="left-top item" value="Left_Top">
+    <div class="anchor">
+      <div class="point"></div>
+    </div>
+  </div>
+  <div class="center-top item" value="Center_Top">
+    <div class="anchor">
+      <div class="center"></div>
+      <div class="point"></div>
+    </div>
+  </div>
+  <div class="right-top item" value="Right_Top">
+    <div class="anchor">
+      <div class="point"></div>
+    </div>
+  </div>
+  <div class="hstrth-top item" value="HStrength_Top">
+    <div class="anchor">
+      &lt;&gt;
+    </div>
+  </div>
+  <div class="left-middle item" value="Left_Middle">
+    <div class="anchor">
+      <div class="point"></div>
+      <div class="middle"></div>
+    </div>
+  </div>
+  <div class="center-middle item" value="Center_Middle">
+    <div class="center"></div>
+    <div class="point"></div>
+    <div class="middle"></div>
+    <div class="anchor"></div>
+  </div>
+  <div class="center-right item" value="Right_Middle">
+    <div class="anchor"></div>
+    <div class="middle"></div>
+    <div class="point"></div>
+  </div>
+  <div class="hstrth-middle item" value="HStrength_Middle">
+    <div class="anchor">
+      &lt;&gt;
+    </div>
+    <div class="middle"></div>
+  </div>
+  <div class="left-bottom item" value="Left_Bottom">
+    <div class="anchor">
+    </div>
+    <div class="point"></div>
+  </div>
+  <div class="center-bottom item" value="Center_Bottom">
+    <div class="anchor"></div>
+    <div class="point"></div>
+    <div class="center"></div>
+  </div>
+  <div class="right-bottom item" value="Right_Bottom">
+    <div class="anchor"></div>
+    <div class="point"></div>
+  </div>
+  <div class="hstrth-bottom item" value="HStrength_Bottom">
+    <div class="anchor">
+      &lt;&gt;
+    </div>
+  </div>
+
+  <div class="left-vstrth item" value="Left_VStrength">
+    <div class="anchor">
+      ︿ <br/>﹀
+    </div>
+  </div>
+  <div class="center-vstrth item" value="Center_VStrength">
+    <div class="anchor">
+      ︿ <br/>﹀
+    </div>
+    <div class="center">
+    </div>
+  </div>
+  <div class="right-vstrth item" value="Right_VStrength">
+    <div class="anchor">
+      ︿ <br/>﹀
+    </div>
+  </div>
+  <div class="hstrth-vstrth item" value="HStrength_VStrength">
+    <div class="anchor">
+      ︿ <br/>﹀
+    </div>
+  </div>
+</div>

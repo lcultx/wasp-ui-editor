@@ -1,0 +1,98 @@
+@text-color: #99a5b4;
+@text-color-selected: #ffffff;
+@text-font: 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+@text-shadow: 0 1px 0 #181A20;
+@text-hover: #BCC3CB;
+@text-active: #757F8B;
+
+@app-bg-color: #1f252b;
+@base-bg-color: #262b34;
+@base-border-color: #181a20;
+
+@input-bg-color: #1a1d23;
+@input-border-color: #17191f;
+
+@btn-bg-color: #333b46;
+@btn-bg-color-hover: #373e4b;
+@btn-bg-color-selected: #2c86ff;
+@btn-gradient: -webkit-linear-gradient(top, #353B45, #262B34);
+
+@box-shadow: 0 0 1px 1px #3F3F3F inset, 0 1px 0 #676767;
+@box-shadow-push: 0 0 3px 1px #202020 inset, 0 1px 0 #BEBEBE;
+
+@panel-bg-color: #353b45;
+
+@border-default: 1px solid #181A20;
+
+input {
+  background: @input-bg-color;
+  border: 1px solid @input-border-color;
+  color: @text-color;
+  outline: none;
+  padding: 3px 3px 3px 3px;
+}
+
+button {
+  font-weight: bold;
+  text-shadow: @text-shadow;
+  box-shadow: @box-shadow;
+  background: @btn-gradient;
+  border: @border-default;
+  outline: none;
+  color: @text-color;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  outline: none;
+  color: @text-hover;
+}
+
+button:active {
+  box-shadow: @box-shadow-push;
+  color: @text-active;
+}
+
+button.in-panel {
+  background: @base-bg-color;
+}
+
+button.in-panel:hover {
+  background: lighten(@base-bg-color, 10%);
+}
+
+button {
+  &.selected {
+    background: @btn-bg-color-selected;
+    color: #FFFFFF;
+  }
+}
+
+html, body, div, table, tr, td {
+  padding: 0;
+  margin: 0;
+}
+
+table, tr, td {
+  border-collapse: collapse;
+  border: none;
+}
+
+::-webkit-scrollbar-track {
+  background: @base-bg-color;
+}
+
+::-webkit-scrollbar-corner {
+  background: #21252b;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  border: 3px solid #21252b;
+  background: #353b45;
+  background-clip: content-box;
+}

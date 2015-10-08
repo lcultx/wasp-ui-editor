@@ -1,0 +1,18 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "typescript/typescript.d.ts": {
+      "commit": "a1226afe5c4ab96610e088d970eb4f8537b1d116"
+    },
+    "nedb/nedb.d.ts": {
+      "commit": "76ed26e95e91f1c91f2d11819c44b55b617e859a"
+    },
+    "eventemitter3/eventemitter3.d.ts": {
+      "commit": "52b0ea5c9719831eecf6ba7436660e30061a4b3c"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<div class="hierarchy" onselectstart="return false">
+    <orderable-tree (select)="onSelectNode($event)"
+          (add)="onAddNode($event)"
+          (remove)="onRemoveNode($event)"
+          (copy)="onCopyNode($event)"
+          (childify)="onChildifyNode($event)"
+          (drop)="onNodeDropped($event)"
+          [root]="root"
+
+          (drop-top)="onNodeTopDrop($event)"
+          (drop-center)="onNodeCenterDrop($event)"
+          (drop-bottom)="onNodeBottomDrop($event)"
+          (export)="onNodeExport($event)"
+          >
+
+    </orderable-tree>
+
+</div>

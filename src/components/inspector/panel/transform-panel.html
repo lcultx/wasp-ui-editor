@@ -1,0 +1,85 @@
+<panel title="Transform">
+  <div class="component" *ng-if="!objdata.rect">
+    <div class="row">
+      <div class="label">position</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.transform.x" type="number">
+        <input [(ng-model)]="objdata.transform.y" type="number">
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">scale</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.transform.scaleX" type="number">
+        <input [(ng-model)]="objdata.transform.scaleY" type="number">
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">rotation</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.transform.rotation" type="number">
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">skew</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.transform.skewX" type="number">
+        <input [(ng-model)]="objdata.transform.skewY" type="number">
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">relative</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.transform.relative" type="checkbox">
+      </div>
+    </div>
+  </div>
+  <div class="component" *ng-if="objdata.rect">
+    <div class="row">
+      <div class="label">anchorMode</div>
+      <div class="fields">
+        <anchor-mode-field class="custom" [objdata]="objdata"></anchor-mode-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">position</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.transform.px" type="number">
+        <input [(ng-model)]="objdata.transform.py" type="number">
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">size</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.transform.width" type="number">
+        <input [(ng-model)]="objdata.transform.height" type="number">
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">scale</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.transform.scaleX" type="number">
+        <input [(ng-model)]="objdata.transform.scaleY" type="number">
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">rotation</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.transform.rotation" type="number">
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">skew</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.transform.skewX" type="number">
+        <input [(ng-model)]="objdata.transform.skewY" type="number">
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">relative</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.transform.relative" type="checkbox">
+      </div>
+    </div>
+  </div>
+</panel>

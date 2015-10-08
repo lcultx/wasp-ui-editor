@@ -1,0 +1,75 @@
+@import (reference) "../../basic";
+
+.dialog-container {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 100;
+}
+
+ide-dialog {
+  position: absolute;
+  height: 500px;
+  width: 700px;
+  margin-left: -350px;
+  margin-top: 0px;
+  top: 0;
+  left: 0;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  box-shadow: 0px 0px 30px #000000;
+  border: none;
+
+  header {
+    width: 100%;
+    color: @text-color;
+    font-family: @text-font;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: @app-bg-color;
+    padding: 5px 5px 5px 5px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  > section {
+    width: 100%;
+    -webkit-flex: 1;
+    background-color: @base-bg-color;
+    display: flex;
+    flex-direction: column;
+  }
+
+  > .buttons {
+    background-color: @app-bg-color;
+    padding: 10px 10px 10px 10px;
+    text-align: right;
+    button {
+      padding: 0 10px 0 0;
+      line-height: 30px;
+      font-size: 15px;
+      font-weight: normal;
+      width: 115px;
+    }
+    button:before {
+      font-size: 1.2em;
+      padding: 0 10px;
+      border-right: @border-default;
+      margin-right: 10px;
+      float: left;
+    }
+    .cancel {
+      float: left;
+    }
+    .cancel:before {
+      content: "\2718";
+      background-color: rgba(255, 0, 0, 0.3);
+    }
+    .ok:before {
+      content: "\2714";
+      background-color: rgba(6, 255, 0, 0.3);
+    }
+  }
+}

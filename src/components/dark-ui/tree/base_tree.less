@@ -1,0 +1,93 @@
+@import (reference) "../../basic";
+.tree{
+  cursor: default;
+  .leaf-name{
+    height: 24px;
+    line-height: 24px;
+    color: @text-color;
+    font-size: 12px;
+    font-family: @text-font;
+    padding-left: 10px;
+
+  }
+
+
+  .expanded:before ,.collapsed:before,.blank:before{
+    font-family: 'Lucida Console';
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    font-size: 13px;
+    /* font-weight: bold; */
+
+  }
+
+  :before {
+    text-shadow: 1px 1px 1px #000;
+  }
+
+  .expanded:before {
+    content: '\25CE';
+  }
+  .collapsed:before {
+    content: '\25C9';
+  }
+
+  .blank:before {
+    content: '\25CB';
+  }
+
+  .file-dir.expanded:before{
+    content:'\1F4C2';
+    color: #FFD988;
+  }
+
+  .file-dir.collapsed:before{
+    content:'\1F4C1';
+    color: #C7BC92
+  }
+
+  .file.blank:before {
+    content: '\1F4C4';
+    color: #7CA4D2;
+  }
+
+  .children{
+    padding-left: 1em;
+  }
+
+  .active > .leaf-name{
+
+    .leaf-name-text {
+      color: #fff;
+    }
+    :before {
+      color: #fff;
+    }
+
+  }
+
+  .active > .leaf-name:before{
+    content: '';
+    background-color: #0F2947;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 24px;
+    border: 1px solid #fff;
+  }
+
+  .dragging{
+      font-size: 12px;
+      background-color: none;
+      color:gray;
+  }
+
+
+  .leaf-name .leaf-name-text{
+    position: relative;
+    white-space:nowrap;
+  }
+
+
+}

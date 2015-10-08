@@ -1,0 +1,28 @@
+<div class="explorer" onselectstart="return false"   *ng-if="data">
+
+      <div class="toolbar">
+        <div class="filter">
+            <button (click)="toggleFitterListCheckbox()">&#x26EC;</button>
+            <menu style="display:none;">
+
+              <item *ng-for="#item of data.fileTypeList">
+                  <label>  <input type="checkbox" [value]="item" checked="checked" (click)="onFilterCheckboxChange()">{{item}}</label>
+              </item>
+            </menu>
+        </div>
+
+      </div>
+
+      <file-tree (select)="onSelectNode($event)" *ng-if="data.root"
+            (add)="onAddNode($event)"
+            (remove)="onRemoveNode($event)"
+            (copy)="onCopyNode($event)"
+            (drop)="onNodeDropped($event)"
+            (click)="onNodeClick($event)"
+            (dblclick)="onNodeDblClick($event)"
+            [root]="data.root" [default-close-subtree]=true [hide-file-type-list]="data.hideFileTypeList"
+            >
+
+      </file-tree>
+
+</div>

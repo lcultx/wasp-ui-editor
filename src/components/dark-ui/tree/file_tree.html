@@ -1,0 +1,55 @@
+
+<div class='tree file-tree'  onselectstart="return false">
+  <div "leaf=root" class="leaf">
+    <div class="leaf-name" (^click)="onLeafNameClick(leaf)" (^dblclick)="onLeafNameDoubleClick(leaf)" dynamic-droppable shadow-dragable
+      (dropenter)="onDropEnter($event)"
+      (dropmove)="onDropMove($event)"
+      (dropleave)="onDropLeave($event)"
+      (drop)="onDrop($event)"
+      [data]="leaf"
+      dragging-add-class="dragging"
+      dragging-remove-class="leaf-name"
+    >
+
+      <span class="leaf-name-text expanded file-dir" onselectstart="return false" *ng-if="objHasChildren(leaf)">
+        <span class="icon"></span>
+        {{leaf.name}}
+      </span>
+      <span class="leaf-name-text blank file" onselectstart="return false" *ng-if="!objHasChildren(leaf)">
+        <span class="icon"></span>
+        {{leaf.name}}
+      </span>
+      <contextmenu (^click)="$event.stopPropagation()">
+        <menu>
+          <item>Add
+            <menu style="display:none" show-action="parent:hover">
+              <item (^click)="addUIFile({parent:leaf})">UIFile</item>
+              <item (^click)="addSceneFile({parent:leaf})">SceneFile</item>
+            </menu>
+          </item>
+
+
+        </menu>
+      </contextmenu>
+    </div>
+    <div *ng-if="objHasChildren(leaf)" class="children" onselectstart="return false">
+      <div *ng-for="#child of leaf.children; #i = index">
+          <file-tree
+               (select)="selectLeaf($event)"
+               (click)="clickLeaf($event)"
+               (dblclick)="dblClickLeaf($event)"
+               (add)="addLeaf($event)"
+               (copy)="copyLeaf($event)"
+               (remove)="deleteLeaf($event)"
+               (childify)="childifyLeaf($event)"
+               (drop)="onLeafDropped($event)"
+             [root]="child" [isLeafTree]="true" [default-close-subtree]=true *ng-if="shouldShow(child)"
+             [hide-file-type-list]="hideFileTypeList"
+             >
+
+          </file-tree>
+      </div>
+
+    </div>
+  </div>
+</div>

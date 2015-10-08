@@ -1,0 +1,59 @@
+<panel title="Basic">
+  <div class="component" *ng-if="objdata">
+    <div class="row">
+      <div class="label">name</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.name" type="text">
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">id</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.id" type="text">
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">active</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.active" type="checkbox">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">visible</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.visible" type="checkbox">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">touchable</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.touchable" type="checkbox">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">render</div>
+      <div class="fields">
+          <input [(ng-model)]="objdata.renderLayer" type="text">
+          <input [(ng-model)]="objdata.renderOrder" type="number">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">alpha({{objdata.alpha}})</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.alpha" type='range' min='0' max='1' step='0.01'>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">z</div>
+      <div class="fields">
+        <input [(ng-model)]="objdata.z" type="number">
+      </div>
+    </div>
+  </div>
+
+</panel>

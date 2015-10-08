@@ -1,0 +1,13 @@
+<ide-dialog title="Sprite Selector" class="sprite-selector" (^click)="onClick($event)">
+  <div class="toolbar">
+    <select [(ng-model)]="frame">
+      <option value="wozlla_none_sprite_name">请选择</option>
+      <option *ng-for="#name of sprites; #i = index" value="{{name}}">{{name}}</option>
+    </select>
+    <span class="size">{{frameData}}</span>
+  </div>
+  <div class="img-wrap" (^click)="onImgClick($event)" (^dblclick)="onImgDblClick()">
+    <img [src]="spriteSrc" class="image">
+    <div class="frame-light"></div>
+  </div>
+</ide-dialog>

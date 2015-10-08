@@ -1,0 +1,10 @@
+<ide-dialog title="Component Selector" class="component-selector" (^click)="onClick($event)">
+  <div  class="component-list">
+      <div
+        *ng-for="#name of getComponentNames(); #i = index"
+        class="item"
+        (click)="onItemClick($event)"
+        (dblclick)="onItemDblClick($event)"
+        >{{name}}</div>
+  </div>
+</ide-dialog>
