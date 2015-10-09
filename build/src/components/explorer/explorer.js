@@ -19,6 +19,7 @@ var project = require('../project/project');
 var fs = require('fs.remote!');
 var ui_1 = require('../dark-ui/ui');
 var service_2 = require('./service');
+//import fs = require('fs');
 var Explorer = (function () {
     function Explorer(el, explorerService) {
         var _this = this;

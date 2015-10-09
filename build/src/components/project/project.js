@@ -1,3 +1,4 @@
+/// <reference path="../../tsd.d.ts"/>
 var global = window;
 var ts = global.require('typescript');
 var watchjs = global.require('watchjs');
@@ -12,6 +13,7 @@ var $ = require('jquery');
 var WOZLLA = require('wozllajs');
 exports.currentProjectPath = localStorage.getItem('lastOpenProject') || '';
 exports.currentOpenFile = '';
+exports.fileData;
 exports.savable = false;
 function updateTitle() {
     var title = exports.currentProjectPath + ' - ' + exports.currentOpenFile;
@@ -153,6 +155,7 @@ function handleAddComponent(name) {
     }));
 }
 exports.handleAddComponent = handleAddComponent;
+//http://stackoverflow.com/questions/24356713/node-js-readfile-error-with-utf8-encoded-file-on-windows
 function getSpriteAtlasFileContents(filepath) {
     var data = fs.readFileSync(exports.currentProjectPath + '/tsv2_res/' + filepath, 'utf8');
     return data.toString('utf8').replace(/^\uFEFF/, '');

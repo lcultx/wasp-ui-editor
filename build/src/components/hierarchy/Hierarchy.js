@@ -39,6 +39,15 @@ var Hierarchy = (function () {
         project.eventDispatcher.addListener('openFile', function (e) {
             _this.root = e.data.fileData.root;
         });
+        // var append =   this.root.children;
+        // setInterval(()=>{
+        //   var obj = {
+        //     name:Math.round(Math.random()*100),
+        //     children:[]
+        //   };
+        //   append.push(obj);
+        //   append = obj.children;
+        // },200)
     }
     Hierarchy.prototype.getNodeByUUID = function (tree, uuid) {
         if (tree) {
@@ -197,8 +206,9 @@ var Hierarchy = (function () {
             var child = ev.dragable_data;
             if (target.children.indexOf(child) == -1
                 && target.uuid != child.uuid
-                && !this.isItProgeny(child, target)
-                && this.isExistInRoot(target) && this.isExistInRoot(child)) {
+                && !this.isItProgeny(child, target) //禁止乱伦！
+                && this.isExistInRoot(target) && this.isExistInRoot(child) //maybe angular bug
+            ) {
                 this.isMoveing = true;
                 var bakRoot = objDeepClone(this.root);
                 this.deleteNode(child);
@@ -237,8 +247,9 @@ var Hierarchy = (function () {
             var child = ev.dragable_data;
             if (target.uuid != this.root.uuid
                 && target.uuid != child.uuid
-                && !this.isItProgeny(child, target)
-                && this.isExistInRoot(target) && this.isExistInRoot(child)) {
+                && !this.isItProgeny(child, target) //禁止乱伦！
+                && this.isExistInRoot(target) && this.isExistInRoot(child) //maybe angular bug
+            ) {
                 this.isMoveing = true;
                 var bakRoot = objDeepClone(this.root);
                 this.deleteNode(child);
@@ -268,8 +279,9 @@ var Hierarchy = (function () {
             var child = ev.dragable_data;
             if (target.uuid != this.root.uuid
                 && target.uuid != child.uuid
-                && !this.isItProgeny(child, target)
-                && this.isExistInRoot(target) && this.isExistInRoot(child)) {
+                && !this.isItProgeny(child, target) //禁止乱伦！
+                && this.isExistInRoot(target) && this.isExistInRoot(child) //maybe angular bug
+            ) {
                 this.isMoveing = true;
                 var bakRoot = objDeepClone(this.root);
                 this.deleteNode(child);

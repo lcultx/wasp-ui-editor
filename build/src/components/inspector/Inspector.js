@@ -23,6 +23,11 @@ var css = require('./inspector.css');
 var Inspector = (function () {
     function Inspector() {
         var _this = this;
+        // eventDispatcher.addListener('openFile', (e) => {
+        //     var objData = e.data.fileData.root;
+        //     this._fillDefaults(objData);
+        //     this.objData = objData;
+        // });
         project_1.eventDispatcher.addListener('nodeSelect', function (e) {
             var objData = e.data.node;
             template_1.fillDefaults(objData);

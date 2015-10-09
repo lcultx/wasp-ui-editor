@@ -30,6 +30,7 @@ var Menu = (function () {
                 _this.open();
                 hoverOpenMenuList.push(_this);
             }, function (e) {
+                //this.$element.hide()
             });
         }
     }

@@ -34,6 +34,10 @@ var BaseTree = (function () {
         $('body').click(function () {
             _this.closeAllMenu();
         });
+        //
+        // this.$element.click((e)=>{
+        //   e.stopPropagation();
+        // })
         setTimeout(function () {
             if (_this.isleaftree) {
                 if (_this.defaultCloseSubtree) {
@@ -155,6 +159,7 @@ var BaseTree = (function () {
     };
     BaseTree.prototype.onDropMove = function (ev) {
         console.log('drop move');
+        //  console.log(ev);
     };
     BaseTree.prototype.onDropLeave = function (ev) {
         console.log('drop leave');

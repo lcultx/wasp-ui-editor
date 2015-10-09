@@ -1,5 +1,5 @@
 
-
+console.log('code in vs !!!!!!!!!!!!!!!!!!!!!!!!!!!!');
 import {$} from "atom-space-pen-views";
 import url = require('url');
 import {WaspUIEditorView,waspUIEditorURI} from './atom/views/mainPanelView';

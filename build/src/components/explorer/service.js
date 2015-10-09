@@ -83,6 +83,11 @@ var ExplorerService = (function () {
         var db = this.dbService.getDb();
         if (path) {
             db.find({ key: 'explorer.root' }, function (err, docs) {
+                // if(docs && docs[0] && docs[0].value && docs[0].value.name){
+                //   console.log('success load project tree from db');
+                //   this.data = docs[0].value;
+                //   console.log(this.data);
+                // }else{
                 var tree = {
                     name: 'Explorer',
                     path: path,
@@ -101,6 +106,7 @@ var ExplorerService = (function () {
                         throw err;
                     }
                 });
+                //}
                 callback(_this.data);
             });
         }

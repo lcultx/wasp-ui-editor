@@ -1,3 +1,4 @@
+console.log('code in vs !!!!!!!!!!!!!!!!!!!!!!!!!!!!');
 var mainPanelView_1 = require('./atom/views/mainPanelView');
 var atomUtils = require("./atom/atomUtils");
 function activate(state) {
