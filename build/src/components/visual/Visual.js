@@ -1,8 +1,7 @@
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
@@ -77,7 +76,7 @@ var Visual = (function () {
         this.engineDirector.scheduler.scheduleLoop(function () {
             _this.updateEditTools();
         });
-        window['director'] = this.engineDirector; // for debug
+        window['director'] = this.engineDirector;
         this.updateCanvasSize();
         this.updateScale();
         this.initMouseOperations();
@@ -276,17 +275,8 @@ var Visual = (function () {
         this.fileData = e.data.fileData;
     };
     Visual.prototype.onOpenProject = function (e) {
-        // this.engineDirector.assetManager.setBaseURL('file://' + getCurrentProjectPath() + '/');
     };
     Visual.prototype.onReloadClick = function (timestamp) {
-        // if(this.playMode){
-        //
-        //   requestAnimationFrame((timestamp)=>{
-        //     this.onReloadClick(timestamp)
-        //   });
-        // }
-        // console.log(timestamp)
-        // console.log(this.fileData)
         this.reloadStage(this.fileData);
     };
     Visual.prototype.onDataChange = function (e) {
@@ -316,21 +306,6 @@ var Visual = (function () {
                 }
             }
             else if (paths[paths.length - 4] === 'components' && paths[paths.length - 2] === 'properties') {
-                // var compIdx = parseInt(paths[paths.length-3]);
-                // var compData = this.selectedObjData.components[compIdx];
-                // var compName = compData.name;
-                // var type = WOZLLA.component.ComponentFactory.getType(compName);
-                // var component = this.selectedGameObj.getComponent(type);
-                // var propertyName = paths[paths.length-1];
-                // var propAnno = WOZLLA.component.ComponentFactory.getAnnotation(compName).getPropertyAnnotation(propertyName);
-                // var value = change.value;
-                // if(propAnno.propertyType === WOZLLA.component.Type.Int) {
-                //     value = parseInt(value);
-                // } else if(propAnno.propertyType === WOZLLA.component.Type.Number) {
-                //     value = parseFloat(value);
-                // }
-                // component[propertyName].convert(change.value);
-                // this.selectedGameObj.transform.dirty = true;
                 needLoadAsset = true;
             }
         }
@@ -431,7 +406,6 @@ function toCssMatrix(matrix, scale) {
     m.identity();
     m.appendTransform(0, 0, scale, scale);
     m.append(1, matrix.c, matrix.b, 1, matrix.tx, matrix.ty);
-    // m.appendTransform(0, 0, 1/gameObjScale, 1/gameObjScale);
     return "matrix(" + m.a + "," + m.c + "," + m.b + "," + m.d + "," + m.tx + "," + m.ty + ")";
 }
 module.exports = Visual;

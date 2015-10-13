@@ -9,10 +9,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+console.log('##########################################');
+var System = window.System;
 var ng = require('angular2/angular2');
 var $ = require('jquery');
 var css = require('./menu.css');
 var hoverOpenMenuList = [];
+console.log(ng, ng.Component);
 var Menu = (function () {
     function Menu(el) {
         var _this = this;
@@ -30,7 +33,6 @@ var Menu = (function () {
                 _this.open();
                 hoverOpenMenuList.push(_this);
             }, function (e) {
-                //this.$element.hide()
             });
         }
     }

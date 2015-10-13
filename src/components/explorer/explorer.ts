@@ -3,7 +3,7 @@ import {ExecTimeService as execTime} from '../exec-time/service';
 import ng = require('angular2/angular2');
 import $ = require('jquery');
 import project = require('../project/project');
-var fs = require('fs.remote!');
+var fs = require('fs');
 
 
 import {FileTree,Menu,Item} from '../dark-ui/ui';

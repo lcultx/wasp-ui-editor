@@ -71,7 +71,6 @@ var SpriteSelector = (function () {
             return;
         }
         this.$root.show();
-        // select
         console.log(spriteAtlas);
         var contents = project_1.getSpriteAtlasFileContents(spriteAtlas);
         var frames = JSON.parse(contents).frames;
@@ -81,7 +80,6 @@ var SpriteSelector = (function () {
         }
         this.frames = frames;
         this.sprites = sprites;
-        // image
         this.spriteSrc = project_1.getSpriteAtlasImagePath(spriteAtlas);
         this.updateSelection();
     };

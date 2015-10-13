@@ -12,8 +12,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var angular2_1 = require('angular2/angular2');
 var project = require('../project/project');
 var template = require('../project/template');
-var tpl = require('./hierarchy.html');
-var css = require('./hierarchy.css');
+var tpl = require('./hierarchy.html').load();
+var css = require('./hierarchy.css').load();
 var ui_1 = require('../dark-ui/ui');
 var jQuery = require('jquery');
 var global = window;
@@ -39,15 +39,6 @@ var Hierarchy = (function () {
         project.eventDispatcher.addListener('openFile', function (e) {
             _this.root = e.data.fileData.root;
         });
-        // var append =   this.root.children;
-        // setInterval(()=>{
-        //   var obj = {
-        //     name:Math.round(Math.random()*100),
-        //     children:[]
-        //   };
-        //   append.push(obj);
-        //   append = obj.children;
-        // },200)
     }
     Hierarchy.prototype.getNodeByUUID = function (tree, uuid) {
         if (tree) {
@@ -206,9 +197,8 @@ var Hierarchy = (function () {
             var child = ev.dragable_data;
             if (target.children.indexOf(child) == -1
                 && target.uuid != child.uuid
-                && !this.isItProgeny(child, target) //禁止乱伦！
-                && this.isExistInRoot(target) && this.isExistInRoot(child) //maybe angular bug
-            ) {
+                && !this.isItProgeny(child, target)
+                && this.isExistInRoot(target) && this.isExistInRoot(child)) {
                 this.isMoveing = true;
                 var bakRoot = objDeepClone(this.root);
                 this.deleteNode(child);
@@ -247,9 +237,8 @@ var Hierarchy = (function () {
             var child = ev.dragable_data;
             if (target.uuid != this.root.uuid
                 && target.uuid != child.uuid
-                && !this.isItProgeny(child, target) //禁止乱伦！
-                && this.isExistInRoot(target) && this.isExistInRoot(child) //maybe angular bug
-            ) {
+                && !this.isItProgeny(child, target)
+                && this.isExistInRoot(target) && this.isExistInRoot(child)) {
                 this.isMoveing = true;
                 var bakRoot = objDeepClone(this.root);
                 this.deleteNode(child);
@@ -279,9 +268,8 @@ var Hierarchy = (function () {
             var child = ev.dragable_data;
             if (target.uuid != this.root.uuid
                 && target.uuid != child.uuid
-                && !this.isItProgeny(child, target) //禁止乱伦！
-                && this.isExistInRoot(target) && this.isExistInRoot(child) //maybe angular bug
-            ) {
+                && !this.isItProgeny(child, target)
+                && this.isExistInRoot(target) && this.isExistInRoot(child)) {
                 this.isMoveing = true;
                 var bakRoot = objDeepClone(this.root);
                 this.deleteNode(child);

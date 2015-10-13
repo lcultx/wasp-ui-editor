@@ -5,8 +5,8 @@ import {Menu,Item} from '../menu/menu';
 import {SideDroppable,Droppable,DynamicDroppable} from '../behavior/droppable';
 import {ShadowDragable,Dragable} from '../behavior/dragable';
 var activingLeafElement = null;
-const tpl = require('./base_tree.html');
-const css = require('./base_tree.css');
+const tpl = require('./base_tree.html').load();
+const css = require('./base_tree.css').load();
 @ng.Component({
   selector:'base-tree',
   properties:['root','isleaftree','defaultCloseSubtree'],

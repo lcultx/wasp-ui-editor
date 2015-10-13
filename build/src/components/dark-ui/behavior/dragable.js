@@ -1,8 +1,7 @@
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
@@ -31,7 +30,7 @@ var Dragable = (function () {
         this.elementStartY = 0;
         this.mouseStartX = 0;
         this.mouseStartY = 0;
-        this.sens = 5; //sensitivity
+        this.sens = 5;
         this.eventService = eventService;
         this.$element = $(el.nativeElement);
         $('html').mouseup(function (ev) {

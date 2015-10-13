@@ -9,7 +9,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/// <reference path="../../../typings/tsd.d.ts"/>
 var service_1 = require('../exec-time/service');
 var $ = require('jquery');
 var WOZLLA = require('wozllajs');
@@ -23,9 +22,9 @@ var behavior_1 = require('../dark-ui/behavior');
 var explorer_1 = require('../explorer/explorer');
 var ui_1 = require('../dark-ui/ui');
 var project_1 = require('../project/project');
-var tpl = require('./application.html');
-var baseCss = require('../basic.css');
-var css = require('./application.css');
+var tpl = require('./application.html').load();
+var baseCss = require('../basic.css').load();
+var css = require('./application.css').load();
 var Application = (function () {
     function Application() {
         var _this = this;
@@ -86,7 +85,6 @@ var Application = (function () {
                 scriptTag.src = 'file://' + compFilePath + '?' + Date.now();
                 scriptTag.onload = function () {
                     $('#global-loading').hide();
-                    // scriptTag.parentNode.removeChild(scriptTag);
                 };
                 scriptTag.onerror = function () {
                     alert('加载自定义组件失败');

@@ -23,9 +23,9 @@ import {
     getCurrentProjectPath
 } from '../project/project';
 
-const tpl = require('./application.html');
-const baseCss = require('../basic.css');
-const css = require('./application.css');
+const tpl = require('./application.html').load();
+const baseCss = require('../basic.css').load();
+const css = require('./application.css').load();
 
 
 @Component({

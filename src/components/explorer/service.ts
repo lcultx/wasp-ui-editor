@@ -3,9 +3,9 @@ import project = require('../project/project');
 import ng = require('angular2/angular2');
 import {DBService} from '../db/DBService';
 
-import fs = require('fs.remote!');
+import fs = require('fs');
 
-import nPath = require('path.remote!');
+import nPath = require('path');
 import {remote} from '../electron/electron';
 var  Datastore =  remote.require('nedb');
 export class ExplorerService{

@@ -2,7 +2,7 @@ var service_1 = require('../exec-time/service');
 var electron_1 = require('../electron/electron');
 var project = require('../project/project');
 var Datastore = electron_1.remote.require('nedb');
-var nPath = require('path.remote!');
+var nPath = require('path');
 var DBService = (function () {
     function DBService() {
         service_1.ExecTimeService.step('db.DBService init');

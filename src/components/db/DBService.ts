@@ -2,8 +2,8 @@ import {ExecTimeService as execTime} from '../exec-time/service';
 import {remote} from '../electron/electron';
 import project = require('../project/project');
 var  Datastore =  remote.require('nedb');
-import fs = require('fs.remote!');
-import nPath = require('path.remote!');
+import fs = require('fs');
+import nPath = require('path');
 export class DBService{
   db:any
   constructor(){

@@ -1,4 +1,4 @@
-var util = require('util.remote!');
+var util = require('util');
 
 function formatTime (time, precision) {
   var str = '';

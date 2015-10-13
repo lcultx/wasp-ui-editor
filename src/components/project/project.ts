@@ -1,12 +1,12 @@
 /// <reference path="../../tsd.d.ts"/>
 
 var global:any = window;
-var ts = global.require('typescript');
-var watchjs = global.require('watchjs');
-var jsonpatch = global.require('fast-json-patch')
-var remote = global.require('remote');
-var fs = global.require('fs');
-var nPath = global.require('path');
+var ts = require('typescript');
+var watchjs = require('watchjs');
+var jsonpatch = require('fast-json-patch')
+var remote = require('remote');
+var fs = require('fs');
+var nPath = require('path');
 var app = remote.require('app');
 var dialog = remote.require('dialog');
 var template = require('./template');

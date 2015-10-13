@@ -1,9 +1,14 @@
+console.log('##########################################');
+var System = (<any>window).System;
+
+
 import ng = require('angular2/angular2');
 import $ = require('jquery');
 
 const css = require('./menu.css');
 
 var hoverOpenMenuList = [];
+console.log(ng,ng.Component);
 
 @ng.Component({
   selector:'menu'

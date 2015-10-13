@@ -16,8 +16,8 @@ var menu_1 = require('../menu/menu');
 var droppable_1 = require('../behavior/droppable');
 var dragable_1 = require('../behavior/dragable');
 var activingLeafElement = null;
-var tpl = require('./base_tree.html');
-var css = require('./base_tree.css');
+var tpl = require('./base_tree.html').load();
+var css = require('./base_tree.css').load();
 var BaseTree = (function () {
     function BaseTree(el) {
         var _this = this;
@@ -34,10 +34,6 @@ var BaseTree = (function () {
         $('body').click(function () {
             _this.closeAllMenu();
         });
-        //
-        // this.$element.click((e)=>{
-        //   e.stopPropagation();
-        // })
         setTimeout(function () {
             if (_this.isleaftree) {
                 if (_this.defaultCloseSubtree) {
@@ -159,7 +155,6 @@ var BaseTree = (function () {
     };
     BaseTree.prototype.onDropMove = function (ev) {
         console.log('drop move');
-        //  console.log(ev);
     };
     BaseTree.prototype.onDropLeave = function (ev) {
         console.log('drop leave');

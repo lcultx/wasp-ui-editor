@@ -1,4 +1,3 @@
-// based off of http://stackoverflow.com/a/10372280/938089
 var WozllaWorker = (function () {
     function WozllaWorker(task) {
         var global = window;

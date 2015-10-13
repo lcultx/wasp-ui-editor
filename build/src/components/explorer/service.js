@@ -16,7 +16,7 @@ var service_1 = require('../exec-time/service');
 var project = require('../project/project');
 var ng = require('angular2/angular2');
 var DBService_1 = require('../db/DBService');
-var fs = require('fs.remote!');
+var fs = require('fs');
 var electron_1 = require('../electron/electron');
 var Datastore = electron_1.remote.require('nedb');
 var ExplorerService = (function () {
@@ -83,11 +83,6 @@ var ExplorerService = (function () {
         var db = this.dbService.getDb();
         if (path) {
             db.find({ key: 'explorer.root' }, function (err, docs) {
-                // if(docs && docs[0] && docs[0].value && docs[0].value.name){
-                //   console.log('success load project tree from db');
-                //   this.data = docs[0].value;
-                //   console.log(this.data);
-                // }else{
                 var tree = {
                     name: 'Explorer',
                     path: path,
@@ -106,7 +101,6 @@ var ExplorerService = (function () {
                         throw err;
                     }
                 });
-                //}
                 callback(_this.data);
             });
         }

@@ -1,14 +1,10 @@
 var fsu = require("../utils/fsUtil");
 var url = require('url');
-/** Gets the consisten path for the current editor */
 function getCurrentPath() {
     var editor = atom.workspace.getActiveTextEditor();
     return fsu.consistentPath(editor.getPath());
 }
 exports.getCurrentPath = getCurrentPath;
-/**
- * Uri for filepath based on protocol
- */
 function uriForPath(uriProtocol, filePath) {
     return uriProtocol + "//" + filePath;
 }
