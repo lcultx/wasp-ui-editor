@@ -44,7 +44,7 @@ function startMain() {
     require(prefix + '/library/traceur-runtime@0.0.87');
     require(prefix + '/library/es6-module-loader@0.16.6');
     require(prefix + '/library/system@0.16.11');
-    window.Reflect = require(prefix + '/library/Reflect');
+    require(prefix + '/library/angular2.prepare');
     require(prefix + '/build/src/main');
 }
 exports.startMain = startMain;
